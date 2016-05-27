@@ -1,14 +1,13 @@
 {% load staticfiles %}
-<html>
+<html prefix="og: http://ogp.me/ns#">
         <head>
             <title>JD26</title>
+        <meta property="og:type"            content="article" /> 
+        <meta property="og:url"             content="http://jd26.pythonanywhere.com/" /> 
+        <meta property="og:title"           content="Introducing our New Site" /> 
+        <meta property="og:image"           content="{% static 'img/1.jpg' %}" /> 
+        <meta property="og:description"    content="Nunca dejamos de soñar, nunca de dejamos de aprender." />
 
-        <meta property="og:url"           content="http://jd26.pythonanywhere.com/" />
-		<meta property="og:type"          content="website" />
-		<meta property="og:title"         content="JD26 Personal" />
-		<meta property="og:description"   content="Nunca dejamos de soñar, nunca de dejamos de aprender."/>
-		
-		
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
