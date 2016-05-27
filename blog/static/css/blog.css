@@ -1,11 +1,11 @@
     .page-header {
-        background-color: #243C9B;
+        background-color: #E6E6E6;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
     }
 
     .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-        color: #ffffff;
+        color: #424242;
         font-size: 36pt;
         text-decoration: none;
     }
@@ -15,7 +15,7 @@
     }
 
     h1, h2, h3, h4 {
-        font-family: 'Lora', serif;
+        font-family: 'Bad Script', cursive;
     }
 
     .date {
