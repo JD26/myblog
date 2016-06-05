@@ -33,6 +33,7 @@
                         <h2>Posts</h2>
                         {% for post in posts %}            
                             <a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a>
+                            <br>
                         {% endfor %}
                         <h2>Fotos</h2>
                         <h2>Contacto</h2>
