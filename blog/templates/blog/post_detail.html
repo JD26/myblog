@@ -3,9 +3,9 @@
         <head>
             <title>JD26</title>
             <meta property="og:type"            content="article" /> 
-            <meta property="og:url"             content="http://jd26.pythonanywhere.com/post/{{ post.id }}" /> 
+            <meta property="og:url"             content="http://jd26.pythonanywhere.com/post/{{ post.id }}/" /> 
             <meta property="og:title"           content="{{ post.title }}" /> 
-            <meta property="og:image"           content=http://jd26.pythonanywhere.com/static/img/1.jpg" /> 
+            <meta property="og:image"           content="http://jd26.pythonanywhere.com/static/img/1.jpg" /> 
             <meta property="og:description"    content="Nunca dejamos de soñar, nunca de dejamos de aprender." />
 
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -38,7 +38,7 @@
             			<h2>{{ post.title }}</h2>           
             			<p>{{ post.text|safe|linebreaks }}</p>
         			</div>
-                    <div class="fb-share-button" data-href="http://jd26.pythonanywhere.com/post/{{ post.id }}" data-layout="button" data-mobile-iframe="true"></div>
+                    <div class="fb-share-button" data-href="http://jd26.pythonanywhere.com/post/{{ post.id }}/" data-layout="button" data-mobile-iframe="true"></div>
                     <div>
                     	<br>
                     	<br>
