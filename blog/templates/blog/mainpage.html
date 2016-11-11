@@ -27,7 +27,9 @@
                         Y por último, si sabes programar en C++, podrás programar en todo.
                         </p>
                         <h2>Tesis</h2>
-                        <p>Mi tesis se titula: Análisis Matemático de la Interacción Depredador-Presa en un Medio Acuático Contaminado.</p>
+                        <p>Mi tesis se titula: Análisis Matemático de la Interacción Depredador-Presa en un Medio Acuático Contaminado.<br>
+                        <a href="https://drive.google.com/open?id=0B1QM9BoNWzUmdTlKMWpQaHBHMVE" target="_blank" ><i>Resumen</i></a>
+                        </p>
                         <h2>Posts</h2>
                         {% for post in posts %}            
                             <a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a>
@@ -36,6 +38,7 @@
                         <h2>Files</h2>
                         <p>
                         <a href="https://drive.google.com/open?id=0B1QM9BoNWzUmTFNEM3RpbnkzTXc" target="_blank" ><i>Simulación numérica de ecuaciones diferenciales estocásticas con R</i></a>
+
                         </p>                     
                         <h2>Fotos</h2>
                         <img src="{% static 'mypics/1.jpg' %}" height="40%" />
