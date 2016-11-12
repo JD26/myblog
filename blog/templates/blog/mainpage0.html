@@ -1,0 +1,62 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}  
+<div class="main" >
+                    	<img src="{% static 'img/1.jpg' %}" height="40%" />
+                        <h2>Sobre mi</h2>
+                        <p>Nací en Lima, capital de Perú. Crecí en un barrio del distrito de San Martín de Porres.
+                        Estudie Computación Científica en la Facultad de Matemáticas de la Universidad Nacional Mayor de San Marcos. Trabajé algunos años para el sector privado y el estado. ¡Ya defendí mi tesis!
+                        </p>
+                        <h2>Areas of interest</h2>
+                        <p>
+                        <ul>
+                        <li>Ordinary Differential Equations</li>
+                        <li>Graph Theory</li>
+                        <li>Population Dynamics</li>
+                        <li>Predator-Prey Models</li>                        
+                        <li>Epidemiology</li>
+                        <li>Ecology</li>
+                        <li>Numerical Methods</li>
+                        <li>Linear Algebra</li>                                               
+                        </ul>                       
+                        </p>
+                        <h2>Programming languages (favorites)</h2>
+                        <p>Python definitavamente. El Zen de Python me ha convencido!<br>
+                        R es muy genial porque hace casi todo sin muchas complicaciones, sobre todo con RStudio; además a mis amigos estadísticos les cae muy bien!<br>
+                        Y por último, si sabes programar en C++, podrás programar en todo.
+                        </p>
+                        <h2>Tesis</h2>
+                        <p>Mi tesis se titula: Análisis Matemático de la Interacción Depredador-Presa en un Medio Acuático Contaminado.<br>
+                        <a href="https://drive.google.com/open?id=0B1QM9BoNWzUmdTlKMWpQaHBHMVE" target="_blank" ><i>Resumen</i></a>
+                        </p>
+                        <h2>Posts</h2>
+                        {% for post in posts %}            
+                            <a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a>
+                            <br>
+                        {% endfor %}
+                        <h2>Files</h2>
+                        <p>
+                        <a href="https://drive.google.com/open?id=0B1QM9BoNWzUmTFNEM3RpbnkzTXc" target="_blank" ><i>Simulación numérica de ecuaciones diferenciales estocásticas con R</i></a>
+
+                        </p>                     
+                        <h2>Fotos</h2>
+                        <img src="{% static 'mypics/1.jpg' %}" height="40%" />
+                        <br>Después de la sustentación. Por fín!<br><br>
+                        <img src="{% static 'mypics/2.jpg' %}" height="40%" />
+                        <br>En la conferencia del profesor Eduardo.<br><br>
+                        <img src="{% static 'mypics/3.jpg' %}" height="40%" />
+                        <br>Aquí(Perú) se come rico.<br><br>
+                        <img src="{% static 'mypics/4.jpg' %}" height="40%" />
+                        <br>Demasiado!<br><br>
+                        <img src="{% static 'mypics/5.jpg' %}" height="40%" />
+                        <br>Ubatuba, inolvidable.<br><br>
+                        <h2>Web Apps</h2>
+                         <a href="https://josue.shinyapps.io/PSModel/">Singular perturbation</a><br>
+                         <a href="https://josue.shinyapps.io/LKTModel/">Lotka Volterra model with impact of a toxin</a><br>
+                         <a href="https://josue.shinyapps.io/ChaosLevins/">Chaos-Levins</a><br>
+                         <a href="http://josue.shinyapps.io/SIRModel/">SIR Model</a>
+                        <h2>Contacto</h2>
+                        <p>Para cualquier consulta o comentario (o si te puedo ayudar en algo relacionado a la matemática y la computación) puedes escribirme a josuediazavalos@gmail.com</p>
+</div>                
+{% endblock content %}

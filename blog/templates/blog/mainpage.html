@@ -1,14 +1,119 @@
-{% extends 'blog/base.html' %}
-{% load staticfiles %}
 
-{% block content %}  
-<div class="main" >
-                    	<img src="{% static 'img/1.jpg' %}" height="40%" />
-                        <h2>Sobre mi</h2>
-                        <p>Nací en Lima, capital de Perú. Crecí en un barrio del distrito de San Martín de Porres.
-                        Estudie Computación Científica en la Facultad de Matemáticas de la Universidad Nacional Mayor de San Marcos. Trabajé algunos años para el sector privado y el estado. ¡Ya defendí mi tesis!
-                        </p>
-                        <h2>Areas of interest</h2>
+{% load staticfiles %}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JD26</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-- Header Section -->
+<section class="banner" role="banner"> 
+  <!-- Navigation Section -->
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="#introduction">About Me</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#works">Pics</a></li>
+          <li><a href="#others">Others</a></li>          
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!-- Navigation Section --> 
+  <!-- Banner Section -->
+  <div class="container">
+    <div class="col-md-7 banner-inner-wrapper">
+      <div class="banner-text">
+        <h1>I'm Josue.</h1>
+        <p>Never stop learning, never stop dreaming.</p>
+        <a href="#introduction" class="btn">Find out more</a> </div>
+      <!-- banner text --> 
+    </div>
+  </div>
+  <!-- Banner Section --> 
+</section>
+<!-- Header Section --> 
+<!-- Intro Section -->
+<section id="introduction" class="section introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+        <p align= "center">
+          <img src="{% static 'img/cbu.jpg' %}" height="300" alt="">
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="intro-content">        
+          <p align= "justify">Nací en Lima, capital de Perú. Crecí en un barrio del distrito de San Martín de Porres.
+            Estudie Computación Científica en la Facultad de Matemáticas de la Universidad Nacional 
+            Mayor de San Marcos y me siento completamente satisfecho con la carrera que estudié. 
+            Trabajé algunos años para el sector privado y el estado. Luego le dediqué todo mi tiempo
+            a terminar mi tesis.
+            <br>
+            Me interesa mucho el cuidado del planeta y de las personas, por eso direcciono 
+            mi profesión a la ecología y la salud pública.
+            </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="intro-content">
+          <h4>+</h4>
+          <ul>
+            <li><a href="https://drive.google.com/open?id=0B1QM9BoNWzUmS3ROYmY0bERqWlk" target="_blank" >CV</a></li>            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Intro Section --> 
+
+<!-- Research Section -->
+<section id="research" class="section introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h4>Thesis</h4>
+            <p>
+            <ul>
+            <li><a href="https://drive.google.com/open?id=0B1QM9BoNWzUmdTlKMWpQaHBHMVE" target="_blank" >Resumen</a></li>
+            </ul>                       
+            </p>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="intro-content">
+          <p align= "justify">
+            El objetivo en mi trabajo de tesis fue analizar la interacción ecológica depredador-presa
+            considerando que esta interacción se da en un medio acuático contaminado.
+            Trabajo en colaboración con mi asesora de tesis, la profesora Roxana López Cruz (Arizona State University), el profesor Eduardo González Olivares (Universidad de Valparaíso) y el profesor Marco Ortíz (Universidad de Antofagasta), a quienes tengo profundo respeto y considero mis amigos.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="intro-content">
+          <h4>Areas of interest</h4>
                         <p>
                         <ul>
                         <li>Ordinary Differential Equations</li>
@@ -21,42 +126,186 @@
                         <li>Linear Algebra</li>                                               
                         </ul>                       
                         </p>
-                        <h2>Programming languages (favorites)</h2>
-                        <p>Python definitavamente. El Zen de Python me ha convencido!<br>
-                        R es muy genial porque hace casi todo sin muchas complicaciones, sobre todo con RStudio; además a mis amigos estadísticos les cae muy bien!<br>
-                        Y por último, si sabes programar en C++, podrás programar en todo.
-                        </p>
-                        <h2>Tesis</h2>
-                        <p>Mi tesis se titula: Análisis Matemático de la Interacción Depredador-Presa en un Medio Acuático Contaminado.<br>
-                        <a href="https://drive.google.com/open?id=0B1QM9BoNWzUmdTlKMWpQaHBHMVE" target="_blank" ><i>Resumen</i></a>
-                        </p>
-                        <h2>Posts</h2>
-                        {% for post in posts %}            
-                            <a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a>
-                            <br>
-                        {% endfor %}
-                        <h2>Files</h2>
-                        <p>
-                        <a href="https://drive.google.com/open?id=0B1QM9BoNWzUmTFNEM3RpbnkzTXc" target="_blank" ><i>Simulación numérica de ecuaciones diferenciales estocásticas con R</i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Research Section --> 
 
-                        </p>                     
-                        <h2>Fotos</h2>
-                        <img src="{% static 'mypics/1.jpg' %}" height="40%" />
-                        <br>Después de la sustentación. Por fín!<br><br>
-                        <img src="{% static 'mypics/2.jpg' %}" height="40%" />
-                        <br>En la conferencia del profesor Eduardo.<br><br>
-                        <img src="{% static 'mypics/3.jpg' %}" height="40%" />
-                        <br>Aquí(Perú) se come rico.<br><br>
-                        <img src="{% static 'mypics/4.jpg' %}" height="40%" />
-                        <br>Demasiado!<br><br>
-                        <img src="{% static 'mypics/5.jpg' %}" height="40%" />
-                        <br>Ubatuba, inolvidable.<br><br>
-                        <h2>Web Apps</h2>
-                         <a href="https://josue.shinyapps.io/PSModel/">Singular perturbation</a><br>
-                         <a href="https://josue.shinyapps.io/LKTModel/">Lotka Volterra model with impact of a toxin</a><br>
-                         <a href="https://josue.shinyapps.io/ChaosLevins/">Chaos-Levins</a><br>
-                         <a href="http://josue.shinyapps.io/SIRModel/">SIR Model</a>
-                        <h2>Contacto</h2>
-                        <p>Para cualquier consulta o comentario (o si te puedo ayudar en algo relacionado a la matemática y la computación) puedes escribirme a josuediazavalos@gmail.com</p>
-</div>                
-{% endblock content %}
+
+<!-- work section -->
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/1.jpg' %}" class="work-box"> <img src="{% static 'img/1.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/2.jpg' %}" class="work-box"> <img src="{% static 'img/2.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/3.jpg' %}" class="work-box"> <img src="{% static 'img/3.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/4.jpg' %}" class="work-box"> <img src="{% static 'img/4.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/5.jpg' %}" class="work-box"> <img src="{% static 'img/5.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/6.jpg' %}" class="work-box"> <img src="{% static 'img/6.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/7.jpg' %}" class="work-box"> <img src="{% static 'img/7.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/8.jpg' %}" class="work-box"> <img src="{% static 'img/8.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/9.jpg' %}" class="work-box"> <img src="{% static 'img/9.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/10.jpg' %}" class="work-box"> <img src="{% static 'img/10.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/11.jpg' %}" class="work-box"> <img src="{% static 'img/11.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-2 col-md-4 col-sm-4 work"> <a href="{% static 'img/12.jpg' %}" class="work-box"> <img src="{% static 'img/12.jpg' %}" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p><i class="fa fa-search-plus fa-2x"></i></p>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+    </div>
+  </div>
+</section>
+<!-- work section --> 
+
+<!-- other section -->
+<section id="others" class="section introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+        
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-6">
+        <div class="intro-content">        
+          <h4>Files</h4>
+                        <p>
+                        <ul>
+                        <li><a href="https://drive.google.com/open?id=0B1QM9BoNWzUmTFNEM3RpbnkzTXc" target="_blank" > Numerical solution of stochastic differential equations with R</a></li>                          
+                        </ul>                       
+                        </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="intro-content">
+          <h4>Web apps</h4>
+                        <p>
+                        <ul>
+                        <li><a href="https://josue.shinyapps.io/PSModel/" target="_blank">Singular perturbation</a></li>
+                        <li><a href="https://josue.shinyapps.io/LKTModel/" target="_blank">Lotka Volterra model with impact of a toxin</a></li>
+                        <li><a href="https://josue.shinyapps.io/ChaosLevins/" target="_blank">Chaos-Levins</a></li>
+                        <li><a href="http://josue.shinyapps.io/SIRModel/" target="_blank">SIR Model</a></li>
+                        </ul>                       
+                        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- other section -->
+
+<!-- footer section -->
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="col-md-4">
+      <h4>Contact</h4>
+      <p>Call: +51 976 353 127 <br>
+        Email : <a href="mailto:josuediazavalos@gmail.com"> josuediazavalos@gmail.com </a></p>
+    </div>
+    <div class="col-md-3">
+      <h4>Social presense</h4>
+      <ul class="footer-share">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-md-5">
+      
+    </div>
+  </div>
+</footer>
+<!-- footer section --> 
+
+<!-- JS FILES --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'js/jquery.fancybox.pack.js' %}"></script> 
+<script src="{% static 'js/retina.min.js' %}"></script> 
+<script src="{% static 'js/modernizr.js' %}"></script> 
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
